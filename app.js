@@ -6,7 +6,8 @@ function agregarAmigo(){
  return NomAmigo;
 }
 
-console.log(agregarAmigo());
+let prueba = agregarAmigo();
+console.log(prueba);
 
 function sortearAmigo(){
 
