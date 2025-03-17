@@ -1,8 +1,8 @@
 let amigoslista = [];
-let NomAmigo = document.getElementById("amigo").value;
-
 
 function validadEntrada(){
+    // Obtener el valor actual del campo dentro de la función
+    let NomAmigo = document.getElementById("amigo").value;
 
     // Si el campo está vacío, mostramos una alerta y salimos de la función.
     if (NomAmigo === "") {
@@ -17,13 +17,20 @@ function validadEntrada(){
 
 
 function agregarAmigo(){ //Agrega el nombre del amigo a la lista
+
+    let NomAmigo = validadEntrada();
+    if (NomAmigo === null) return; // Si es null, no agregamos el nombre y salimos de la función
+    
     amigoslista.push(NomAmigo);
 
     console.log(amigoslista)
 
+    // Actualizar la lista en el HTML
     let listaNomHTML = document.getElementById("name-list");
-    listaNomHTML.innerHTML = amigoslista;
+    listaNomHTML.innerHTML = amigoslista.join(", "); // Mostrar la lista como texto separado por comas
 
+    // Limpiar el campo de texto
+    limpiarCampo();
     return amigoslista;
 }
 
@@ -33,10 +40,20 @@ function limpiarCampo(){
 }
 
 function sortearAmigo(){
-    let amigoSorteado = Math.random(amigoslista);
+    //Asegurarse que la lsta no este vacia
+    if (amigoslista.length === 0){
+        alert("La lista de amigos está vacía.");
+        return;
+    }
 
-    console.log(amigoSorteado)
+    let indiceRandomList = Math.floor(Math.random() * amigoslista.length);
+    amigoSorteado = amigoslista[indiceRandomList];
 
+    // Mostrar el amigo sorteado en el HTML
+    let nomSorteado = document.getElementById(resultado);
+    nomSorteado.innerHTML = "El amigo secreto sorteado es: " + amigoSorteado;
+
+    console.log("Amigo sorteado:", amigoSorteado);
     return amigoSorteado;
 }
 
