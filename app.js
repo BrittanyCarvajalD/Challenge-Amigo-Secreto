@@ -7,8 +7,8 @@ function agregarAmigo(){
 }
 
 
-console.log(agregarAmigo());
-
 function sortearAmigo(){
 
 }
+
+console.log(agregarAmigo());
