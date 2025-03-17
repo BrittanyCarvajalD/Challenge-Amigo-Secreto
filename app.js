@@ -10,9 +10,8 @@ function agregarAmigo(){
         return;
     }
 
-    else{
-        return NomAmigo;
-    }
+    return NomAmigo;
+
 }
 
 
