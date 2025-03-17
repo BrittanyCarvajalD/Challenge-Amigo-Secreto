@@ -44,11 +44,11 @@ function sortearAmigo(){
         return;
     }
 
-    let indiceRandomList = Math.floor(Math.random() * amigoslista.length);
+    let indiceRandomList = Math.floor(Math.random() * amigoslista.length)
     amigoSorteado = amigoslista[indiceRandomList];
 
     // Mostrar el amigo sorteado en el HTML
-    let nomSorteado = document.getElementById(resultado);
+    let nomSorteado = document.getElementById("amigo-sorteado");
     nomSorteado.innerHTML = "El amigo secreto sorteado es: " + amigoSorteado;
 
     console.log("Amigo sorteado:", amigoSorteado);
