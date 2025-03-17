@@ -24,7 +24,7 @@ function agregarAmigo(){ //Agrega el nombre del amigo a la lista
     console.log("Lista de amigos " + amigoslista)
 
     // Actualizar la lista en el HTML
-    let listaNomHTML = document.getElementById("name-list");
+    let listaNomHTML = document.getElementById("listaAmigos");
     listaNomHTML.innerHTML = amigoslista.join(", "); // Mostrar la lista como texto separado por comas
 
     // Limpiar el campo de texto
