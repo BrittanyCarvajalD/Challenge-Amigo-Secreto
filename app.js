@@ -10,8 +10,6 @@ function validadEntrada(){
         return null; // Salimos de la función si no hay nombre.
     }
 
-    console.log("Amigo agregado:", NomAmigo); // Mostramos en la consola el nombre ingresado
-
     return NomAmigo;
 }
 
@@ -23,7 +21,7 @@ function agregarAmigo(){ //Agrega el nombre del amigo a la lista
     
     amigoslista.push(NomAmigo);
 
-    console.log(amigoslista)
+    console.log("Lista de amigos " + amigoslista)
 
     // Actualizar la lista en el HTML
     let listaNomHTML = document.getElementById("name-list");
