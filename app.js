@@ -3,7 +3,16 @@ let amigos = [];
 
 function agregarAmigo(){
     let NomAmigo = document.getElementById("amigo").value;
-    return NomAmigo;
+
+     
+    if (NomAmigo === "") {
+        alert("⚠️ Ingresa un nombre antes de agregar.");
+        return;
+    }
+
+    else{
+        return NomAmigo;
+    }
 }
 
 
