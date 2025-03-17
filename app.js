@@ -2,12 +2,12 @@
 let amigos = [];
 
 function agregarAmigo(){
- let NomAmigo = document.getElementById("amigo");
- return NomAmigo;
+    let NomAmigo = document.getElementById("amigo").value;
+    return NomAmigo;
 }
 
-let prueba = agregarAmigo();
-console.log(prueba);
+
+console.log(agregarAmigo());
 
 function sortearAmigo(){
 
